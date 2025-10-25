@@ -2,3 +2,6 @@
 Applicazione realizzata a puro scopo personale per approfondire l'utilizzo degli strumenti grafici di JavaFX e SceneBuilder. Lo scopo è la creazione di un Gioco di Ruolo (GDR) a turni, in cui è possibile scegliere una classe di personaggi con cui combattere, ognuna con le sue caratteristiche peculiarie. 
 I temi principali affrontati sono l'ereditarietà di attributi e azioni dei personaggi e la generalizzazione della grafica rispetto alle loro azioni. 
 E' in sospeso una nuova versione dell'applicazione per generalizzare l'aggiunta di nuove classi di personaggi nella vista "SceltaPG": al momento è stata posta particolare attenzione per aggiungere nuove classi di personaggi a livello di codice, ma bisogna comunque aggiungere la nuova classe manualmente nella schermata di scelta personaggio. Nella nuova versione si vuole invece automatizzare questa feature, rendendolo un processo totalmente automatico, così che l'aggiunta di personaggi consista unicamente nella loro creazione e la loro stratta implementazione. 
+
+## Per avviare
+Aprire il terminale nella cartella e inserire mvn javafx:run (se si possiede Maven), altrimenti aprire la cartella src su qualsiasi IDE e avviare l'applicazione da lì. 
