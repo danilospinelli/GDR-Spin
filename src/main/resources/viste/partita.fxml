@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="pane_scena" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Partita">
+   <children>
+      <ImageView fitHeight="407.0" fitWidth="607.0">
+         <image>
+            <Image url="@../immagini/Sfondo2.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="pane_main" layoutY="122.0" prefHeight="285.0" prefWidth="259.0">
+         <children>
+            <Ellipse fill="#119e07" layoutX="131.0" layoutY="228.0" radiusX="100.0" radiusY="43.0" stroke="BLACK" strokeType="INSIDE" />
+            <ProgressBar fx:id="progressBar_main" layoutX="22.0" layoutY="36.0" prefHeight="16.0" prefWidth="200.0" progress="0.0" />
+            <Label fx:id="label_nomeMain" layoutX="22.0" layoutY="14.0" text="Nome Main">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Pane fx:id="pane_pgMain" layoutX="35.0" layoutY="35.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="235.0" fitWidth="185.0">
+                     <image>
+                        <Image url="@../immagini/Guerriero/Guerriero.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label fx:id="label_nomeStaminaMain" layoutX="155.0" layoutY="50.0" text="Stam.:">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="label_staminaMain" layoutX="200.0" layoutY="50.0" text="x">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="48.0" layoutY="50.0" text="/">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="label_hpMain" layoutX="22.0" layoutY="50.0" text="HP" textAlignment="RIGHT">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="label_fullHpMain" layoutX="58.0" layoutY="50.0" text="FullHP">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="label_statusMain" layoutX="150.0" layoutY="17.0" text="Status">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="pane_oppo" layoutX="341.0" prefHeight="285.0" prefWidth="259.0">
+         <children>
+            <Ellipse fill="#119e07" layoutX="131.0" layoutY="228.0" radiusX="100.0" radiusY="43.0" stroke="BLACK" strokeType="INSIDE" />
+            <ProgressBar fx:id="progressBar_oppo" layoutX="22.0" layoutY="36.0" prefHeight="16.0" prefWidth="200.0" progress="0.0" />
+            <Label fx:id="label_nomeOppo" layoutX="22.0" layoutY="14.0" text="Nome Oppo">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Pane fx:id="pane_pgOppo" layoutX="35.0" layoutY="35.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="163.0" fitWidth="226.0" layoutX="-19.0" layoutY="50.0">
+                     <image>
+                        <Image url="@../immagini/Stregone/Stregone.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label fx:id="label_nomeStaminaOppo" layoutX="160.0" layoutY="50.0" text="Stam.:">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="label_staminaOppo" layoutX="205.0" layoutY="50.0" text="y">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="48.0" layoutY="50.0" text="/">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="label_hpOppo" layoutX="22.0" layoutY="50.0" text="HP">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="label_fullHpOppo" layoutX="58.0" layoutY="50.0" text="FullHP">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="label_statusOppo" layoutX="150.0" layoutY="17.0" text="Status">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="pane_comandi" layoutX="-11.0" layoutY="-2.0" prefHeight="146.0" prefWidth="331.0">
+         <children>
+            <Pane layoutX="40.0" layoutY="209.0" prefHeight="35.0" prefWidth="35.0">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="5.0" layoutY="5.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../immagini/Info.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="button_info_main" layoutX="5.0" layoutY="5.0" mnemonicParsing="false" opacity="0.0" prefHeight="25.0" prefWidth="25.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="538.0" layoutY="84.0" prefHeight="35.0" prefWidth="35.0">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="5.0" layoutY="5.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../immagini/Info.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="button_info_oppo" layoutX="5.0" layoutY="5.0" mnemonicParsing="false" opacity="0.0" prefHeight="25.0" prefWidth="25.0" />
+               </children>
+            </Pane>
+            <ImageView fitHeight="139.0" fitWidth="304.0" layoutX="14.0" layoutY="4.0">
+               <image>
+                  <Image url="@../immagini/Box%20Comandi.gif" />
+               </image>
+            </ImageView>
+            <Button fx:id="button_attacco1" layoutX="35.0" layoutY="22.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="121.0" text="Attacco1">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="button_attacco2" layoutX="175.0" layoutY="22.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="121.0" text="Attacco2">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="button_cura" layoutX="90.0" layoutY="85.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="147.0" text="Cura">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Label layoutX="60.0" layoutY="56.0" text="Costo: ">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="199.0" layoutY="56.0" text="Costo: ">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="label_stamina1" layoutX="106.0" layoutY="56.0" text="x">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="label_stamina2" layoutX="245.0" layoutY="56.0" text="y">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Pane layoutX="207.0" layoutY="80.0" prefHeight="35.0" prefWidth="35.0">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="5.0" layoutY="5.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../immagini/Info.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="button_info_cura" layoutX="5.0" layoutY="5.0" mnemonicParsing="false" opacity="0.0" prefHeight="25.0" prefWidth="25.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="266.0" layoutY="17.0" prefHeight="35.0" prefWidth="35.0">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="5.0" layoutY="5.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../immagini/Info.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="button_info_attacco2" layoutX="5.0" layoutY="5.0" mnemonicParsing="false" opacity="0.0" prefHeight="25.0" prefWidth="25.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="126.0" layoutY="17.0" prefHeight="35.0" prefWidth="35.0">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="5.0" layoutY="5.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../immagini/Info.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="button_info_attacco1" layoutX="5.0" layoutY="5.0" mnemonicParsing="false" opacity="0.0" prefHeight="25.0" prefWidth="25.0" />
+               </children>
+            </Pane>
+            <Label layoutX="113.0" layoutY="105.0" text="Rimanenti: ">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="label_cure" layoutX="190.0" layoutY="105.0" text="z">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="pane_output" layoutX="241.0" layoutY="285.0" prefHeight="119.0" prefWidth="372.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#404040" height="86.0" layoutX="8.0" layoutY="25.0" stroke="BLACK" strokeType="INSIDE" width="349.0" />
+            <Label layoutX="121.0" layoutY="51.0" />
+            <Label fx:id="label_output" layoutX="14.0" layoutY="25.0" maxWidth="339.0" prefHeight="86.0" prefWidth="339.0" text="Output" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="pane_info_comandi" layoutX="-17.0" layoutY="-7.0" prefHeight="146.0" prefWidth="331.0" visible="false">
+         <children>
+            <ImageView fitHeight="139.0" fitWidth="304.0" layoutX="14.0" layoutY="4.0">
+               <image>
+                  <Image url="@../immagini/Box%20Info.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="277.0" layoutY="20.0" preserveRatio="true">
+               <image>
+                  <Image url="@../immagini/x.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="label_info_comandi" layoutX="42.0" layoutY="30.0" prefHeight="96.0" prefWidth="253.0" text="INFO">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Button fx:id="button_x_comandi" layoutX="277.0" layoutY="20.0" mnemonicParsing="false" opacity="0.0" prefHeight="25.0" prefWidth="25.0" />
+         </children>
+      </Pane>
+      <Pane fx:id="pane_info_main" layoutX="8.0" layoutY="119.0" prefHeight="285.0" prefWidth="245.0" visible="false">
+         <children>
+            <ImageView fitHeight="295.0" fitWidth="242.0">
+               <image>
+                  <Image url="@../immagini/Box%20Info%20PG.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="label_info_main" layoutX="39.0" layoutY="53.0" prefHeight="200.0" prefWidth="163.0" text="INFO">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="184.0" layoutY="22.0" preserveRatio="true">
+               <image>
+                  <Image url="@../immagini/x.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="button_x_main" layoutX="184.0" layoutY="22.0" mnemonicParsing="false" opacity="0.0" prefHeight="35.0" prefWidth="35.0" />
+         </children>
+      </Pane>
+      <Pane fx:id="pane_info_oppo" layoutX="349.0" layoutY="-4.0" prefHeight="285.0" prefWidth="245.0" visible="false">
+         <children>
+            <ImageView fitHeight="295.0" fitWidth="242.0">
+               <image>
+                  <Image url="@../immagini/Box%20Info%20PG.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="label_info_oppo" layoutX="39.0" layoutY="53.0" prefHeight="200.0" prefWidth="163.0" text="INFO">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="184.0" layoutY="22.0" preserveRatio="true">
+               <image>
+                  <Image url="@../immagini/x.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="button_x_oppo" layoutX="184.0" layoutY="22.0" mnemonicParsing="false" opacity="0.0" prefHeight="35.0" prefWidth="35.0" />
+         </children>
+      </Pane>
+      <Pane fx:id="pane_buff" layoutX="-11.0" layoutY="-2.0" prefHeight="146.0" prefWidth="331.0" visible="false">
+         <children>
+            <ImageView fitHeight="139.0" fitWidth="304.0" layoutX="14.0" layoutY="4.0">
+               <image>
+                  <Image url="@../immagini/Box%20Comandi.gif" />
+               </image>
+            </ImageView>
+            <Button fx:id="button_buffAtk" layoutX="35.0" layoutY="31.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="86.0" text="Atk">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="button_buffDef" layoutX="123.0" layoutY="31.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="86.0" text="Def">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="button_buffSpeed" layoutX="212.0" layoutY="31.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="86.0" text="Speed">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="283.0" layoutY="4.0" preserveRatio="true">
+               <image>
+                  <Image url="@../immagini/x.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="button_x_buff" layoutX="283.0" layoutY="4.0" mnemonicParsing="false" opacity="0.0" prefHeight="35.0" prefWidth="35.0" />
+         </children>
+      </Pane>
+   </children>
+</Pane>
