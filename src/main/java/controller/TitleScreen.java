@@ -14,6 +14,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import util.SceneUtils;
 
 public class TitleScreen implements Initializable {
 	
@@ -40,8 +41,7 @@ public class TitleScreen implements Initializable {
 			// Ottieni lo stage corrente dal bottone cliccato
 			Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-			Scene scene = new Scene(root);
-			stage.setScene(scene);
+			SceneUtils.createScaledScene(root, stage);
 			stage.show();
 		} catch(IOException e) {
 			e.printStackTrace();

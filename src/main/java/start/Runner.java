@@ -3,8 +3,8 @@ package start;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
+import util.SceneUtils;
 
 // PER AGGIUNGERE UN NUOVO PERSONAGGIO:
 // 1. Creare la sua classe che estende Personaggio nel datamodel
@@ -21,9 +21,10 @@ public class Runner extends Application {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("/viste/title_screen.fxml"));
         Parent root = loader.load();
 
-        Scene scene = new Scene(root);
-        primaryStage.setScene(scene);
+        SceneUtils.createScaledScene(root, primaryStage);
         primaryStage.setTitle("GDR Spin");
+        primaryStage.setFullScreen(true);
+		primaryStage.setFullScreenExitHint("");
         primaryStage.show();
 	}
 	

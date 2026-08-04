@@ -17,6 +17,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import service.GiocatoreService;
+import util.SceneUtils;
 
 public class GiocoImpl {
 	
@@ -144,7 +145,7 @@ public class GiocoImpl {
 
 		    // Ottieni lo Stage attuale dal pane_pgMain
 		    Stage stage = (Stage) Partita.getController().getpane_pgMain().getScene().getWindow();
-		    stage.setScene(new Scene(root));
+		    SceneUtils.createScaledScene(root, stage);
 		    stage.show();
 		} catch (Exception e) {
 	      	e.printStackTrace();
